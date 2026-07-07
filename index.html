@@ -296,6 +296,7 @@
   .homme-soon-note{text-align:center;margin-top:40px;color:#7c918a;font-family:var(--mono);font-size:0.78rem;}
   .hr-step{cursor:pointer;transition:transform .25s;}
   .routine-2{grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto;}
+  .routine-4{grid-template-columns:repeat(4,1fr);max-width:1120px;margin:0 auto;}
   .hr-step:hover{transform:translateY(-5px);}
   .hr-img{aspect-ratio:1;border-radius:14px;overflow:hidden;margin-bottom:18px;background:rgba(255,255,255,0.04);}
   .hr-img img{width:100%;height:100%;object-fit:cover;}
@@ -715,9 +716,31 @@
           <span class="hr-num">02 — À la sortie</span><h4>Sérum Corps Soyeux</h4><p>Sur peau encore humide : hydratation intense, absorption rapide. Peau lisse, douce et parfumée.</p>
         </div>
       </div>
-      <div class="routine-soon reveal d3">
-        <span class="rs-tag">Bientôt</span>
-        <p><b>La routine visage</b> arrive prochainement — nettoyer, exfolier et hydrater la peau du visage, pensée pour les hommes. En attendant, découvre notre soin signature ci-dessous. 👇</p>
+    </div>
+  </section>
+
+  <!-- ROUTINE VISAGE HOMME -->
+  <section class="homme-sec">
+    <div class="wrap">
+      <span class="homme-kicker center reveal">— La routine visage —</span>
+      <h2 class="homme-h2 reveal d1">Ta routine visage, en 4 gestes</h2>
+      <div class="homme-routine routine-4">
+        <div class="hr-step reveal d1" data-idx="01" onclick="openModalH(3)">
+          <div class="hr-img"><img src="https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893" alt="Nettoyant Visage Homme"></div>
+          <span class="hr-num">01 — Matin & soir</span><h4>Nettoyant Visage</h4><p>Élimine impuretés, sébum et pollution sans dessécher la peau. Le premier réflexe.</p>
+        </div>
+        <div class="hr-step reveal d2" data-idx="02" onclick="openModalH(9)">
+          <div class="hr-img"><img src="https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893" alt="Sérum Anti-Âge"></div>
+          <span class="hr-num">02 — Le soir</span><h4>Sérum Anti-Âge</h4><p>Alternative végétale au rétinol : lisse les rides et améliore la fermeté, sans irritation.</p>
+        </div>
+        <div class="hr-step reveal d3" data-idx="03" onclick="openModalH(5)">
+          <div class="hr-img"><img src="https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893" alt="Crème Hydratante Homme"></div>
+          <span class="hr-num">03 — Matin & soir</span><h4>Crème Hydratante</h4><p>Hydratation longue durée à l'acide hyaluronique, pensée pour la peau masculine. Fini non collant.</p>
+        </div>
+        <div class="hr-step reveal d4" data-idx="04" onclick="openModalH(6)">
+          <div class="hr-img"><img src="https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893" alt="Contour des Yeux 3-en-1"></div>
+          <span class="hr-num">04 — Le matin</span><h4>Contour des Yeux</h4><p>Réduit l'aspect des cernes et dégonfle. Le geste bonus pour un regard reposé.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -766,6 +789,7 @@
         <button class="htab" data-hcat="corps">Corps</button>
         <button class="htab" data-hcat="cheveux">Cheveux</button>
         <button class="htab" data-hcat="hydratation">Hydratation</button>
+        <button class="htab" data-hcat="packs">Packs</button>
       </div>
       <div class="homme-grid" id="hommeGrid"></div>
     </div>
@@ -1257,6 +1281,206 @@ const PRODUITS_H=[
     actifs:["10% Acide Lactique (AHA) — exfolie, renouvelle","1% Acide Hyaluronique — hydrate","Extrait de Thé Blanc — antioxydant","Extrait de Sauge — purifie"],
     conseils:"Appliquer le soir sur peau propre, laisser poser la nuit. 1 à 2 fois par semaine. Éviter l'exposition au soleil après usage, utiliser une protection solaire le lendemain.",
     chips:["10% AHA","ACIDE HYALURONIQUE","THÉ BLANC","RENOUVELLEMENT"]
+  },
+  {
+    cat:"Visage · Nettoyant", nom:"Nettoyant Visage Homme", vol:"145 ml",
+    prix:'21,99 €', cats:["visage"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Le premier geste de la routine visage Homme : un nettoyant doux qui élimine impuretés, sébum et pollution sans dessécher la peau. Formule apaisante à l'Aloe Vera, pH équilibré.",
+    points:["Nettoie en douceur","Ne dessèche pas la peau","pH équilibré","Convient à tous types de peau","Usage quotidien matin & soir"],
+    actifs:["Aloe Vera — apaise","Sodium PCA — hydrate","Base lavante douce — respecte la peau"],
+    conseils:"Faire mousser sur peau humide, masser puis rincer. Matin et soir.",
+    chips:["ALOE VERA","PH ÉQUILIBRÉ","QUOTIDIEN"]
+  },
+  {
+    cat:"Visage · Hydratation", nom:"Gel Matifiant au Zinc", vol:"50 ml",
+    prix:'24,99 €', cats:["visage","hydratation"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Gel hydratant non gras au zinc, pensé pour les peaux mixtes à grasses. Régule les brillances toute la journée sans effet collant.",
+    points:["Régule le sébum","Fini non gras, non collant","Hydrate sans surcharger","Idéal peaux mixtes à grasses"],
+    actifs:["Zinc — régule les brillances","Acide Hyaluronique — hydrate"],
+    conseils:"Appliquer matin et/ou soir sur peau propre. Idéal sous une protection solaire le matin.",
+    chips:["ZINC","NON GRAS","MATIFIANT"]
+  },
+  {
+    cat:"Visage · Hydratation", nom:"Crème Hydratante Homme", vol:"50 ml",
+    prix:'25,99 €', cats:["visage","hydratation"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Crème visage riche en acide hyaluronique, formulée pour la peau masculine plus épaisse. Hydratation longue durée, fini non collant.",
+    points:["Hydratation longue durée","Pensée pour la peau masculine","Fini non collant","Matin & soir"],
+    actifs:["Acide Hyaluronique — hydratation profonde","Vitamine E — protège"],
+    conseils:"Appliquer matin et soir sur visage propre, après le sérum.",
+    chips:["ACIDE HYALURONIQUE","LONGUE DURÉE","MATIN & SOIR"]
+  },
+  {
+    cat:"Visage · Anti-âge", nom:"Contour des Yeux 3-en-1", vol:"15 ml",
+    prix:'21,99 €', cats:["visage"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Soin contour des yeux 3-en-1 : réduit l'aspect des cernes, dégonfle et lisse. Texture fraîche à l'acide hyaluronique.",
+    points:["Réduit l'aspect des cernes","Effet dégonflant","Lisse la zone du regard","Texture fraîche, absorption rapide"],
+    actifs:["Acide Hyaluronique — hydrate","Caféine — effet dégonflant"],
+    conseils:"Tapoter une petite quantité sous les yeux le matin, sur peau propre.",
+    chips:["3-EN-1","CERNES","EFFET FRAÎCHEUR"]
+  },
+  {
+    cat:"Visage · Protection", nom:"Stick Solaire SPF50", vol:"12 g",
+    prix:'19,99 €', cats:["visage"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Protection solaire SPF50 format stick, sans trace blanche, non teinté. Application rapide, idéal visage et zones sensibles.",
+    points:["SPF50 haute protection","Sans trace blanche","Format nomade, application rapide","Non teinté"],
+    actifs:["Filtres UV — haute protection","Base non grasse"],
+    conseils:"Appliquer généreusement avant exposition, renouveler toutes les 2h.",
+    chips:["SPF50","NON TEINTÉ","FORMAT STICK"]
+  },
+  {
+    cat:"Visage · Barbe", nom:"Huile à Barbe Adoucissante", vol:"20 ml",
+    prix:'21,99 €', cats:["visage"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Huile nourrissante pour barbe : assouplit le poil, apaise les démangeaisons et nourrit la peau sous la barbe. Fini non gras.",
+    points:["Assouplit le poil","Apaise les démangeaisons","Nourrit la peau sous la barbe","Fini non gras"],
+    actifs:["Huiles végétales nourrissantes","Vitamine E — protège"],
+    conseils:"Appliquer quelques gouttes sur barbe sèche ou humide, peigner pour répartir.",
+    chips:["BARBE","ASSOUPLIT","NON GRAS"]
+  },
+  {
+    cat:"Visage · Anti-âge", nom:"Sérum Anti-Âge — Alternative Rétinol", vol:"30 ml",
+    prix:'22,99 €', cats:["visage"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Sérum anti-âge à l'alternative végétale au rétinol. Lisse les rides, améliore la fermeté, sans irritation.",
+    points:["Lisse les rides","Améliore la fermeté","Alternative douce au rétinol","Sans irritation"],
+    actifs:["Alternative végétale au rétinol","Vitamine C — éclat"],
+    conseils:"Appliquer le soir sur peau propre, avant la crème hydratante.",
+    chips:["ANTI-ÂGE","ALTERNATIVE RÉTINOL","LE SOIR"]
+  },
+  {
+    cat:"Corps · Hygiène", nom:"Déodorant Bille Sans Aluminium", vol:"50 ml",
+    prix:'18,99 €', cats:["corps"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Déodorant bille sans sels d'aluminium, au panthénol apaisant. Protection 24h, sans marques blanches.",
+    points:["Sans sels d'aluminium","Protection 24h","Sans marques blanches","Apaisant"],
+    actifs:["Panthénol — apaise"],
+    conseils:"Appliquer sur peau propre et sèche.",
+    chips:["SANS ALUMINIUM","24H","SANS MARQUES"]
+  },
+  {
+    cat:"Corps · Hydratation", nom:"Sérum Corporel Bois & Cuir", vol:"270 ml",
+    prix:'19,99 €', cats:["corps","hydratation"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Sérum corps à absorption rapide, parfum boisé ambré et cuir. Hydratation intense, peau douce sans film gras.",
+    points:["Hydratation intense","Absorption rapide","Parfum boisé ambré & cuir","Complète la Crème Mains Bois & Cuir"],
+    actifs:["Acide Hyaluronique — hydratation","Beurre de Cacao — adoucit"],
+    conseils:"Appliquer sur peau propre, masser jusqu'à absorption. Idéal après la douche.",
+    chips:["BOIS & CUIR","ABSORPTION RAPIDE","HYDRATATION"]
+  },
+  {
+    cat:"Corps · Mains", nom:"Crème Mains Bois & Cuir", vol:"270 ml",
+    prix:'19,99 €', cats:["corps","hydratation"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Crème mains nourrissante au beurre de cacao, même parfum boisé ambré et cuir que le sérum corps. Absorption rapide.",
+    points:["Nourrit en profondeur","Même parfum que le Sérum Corporel Bois & Cuir","Absorption rapide","Mains douces toute la journée"],
+    actifs:["Beurre de Cacao — nourrit","Acide Hyaluronique — hydrate"],
+    conseils:"Appliquer sur les mains autant que nécessaire dans la journée.",
+    chips:["BOIS & CUIR","MAINS","NOURRISSANT"]
+  },
+  {
+    cat:"Corps · Réparateur", nom:"Crème Corps Réparatrice Urée", vol:"280 ml",
+    prix:'24,99 €', cats:["corps","hydratation"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Crème corps à 5% d'urée et panthénol, pour les peaux rugueuses (coudes, genoux, talons). Répare et adoucit en profondeur.",
+    points:["5% d'urée","Répare les zones rugueuses","Adoucit en profondeur","Coudes, genoux, talons"],
+    actifs:["Urée 5% — répare","Panthénol 2% — apaise"],
+    conseils:"Appliquer sur les zones rugueuses, matin et/ou soir.",
+    chips:["5% URÉE","RÉPARATEUR","ZONES RUGUEUSES"]
+  },
+  {
+    cat:"Corps · Exfoliant", nom:"Gommage Corps Volcanique", vol:"170 ml",
+    prix:'23,99 €', cats:["corps"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Gommage corps au sable volcanique islandais. Exfolie en profondeur, élimine les peaux mortes, laisse la peau lisse.",
+    points:["Exfolie en profondeur","Sable volcanique islandais","Élimine les peaux mortes","Peau lisse"],
+    actifs:["Sable volcanique — exfolie"],
+    conseils:"Utiliser 1 à 2 fois par semaine sous la douche, sur peau humide.",
+    chips:["VOLCANIQUE","EXFOLIANT","1-2X/SEMAINE"]
+  },
+  {
+    cat:"Cheveux · Shampoing", nom:"Shampoing Vétiver Fumé", vol:"400 ml",
+    prix:'18,99 €', cats:["cheveux"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Shampoing gloss au vétiver fumé, pour des cheveux brillants et disciplinés. Nettoie en douceur sans agresser le cuir chevelu.",
+    points:["Cheveux brillants et disciplinés","Nettoie en douceur","Parfum vétiver fumé","Se marie avec l'Après-Shampoing Vétiver Fumé"],
+    actifs:["Base lavante douce","Agents lissants"],
+    conseils:"Faire mousser sur cheveux mouillés, rincer. Usage régulier.",
+    chips:["VÉTIVER FUMÉ","BRILLANCE","GLOSS"]
+  },
+  {
+    cat:"Cheveux · Soin", nom:"Après-Shampoing Vétiver Fumé", vol:"370 ml",
+    prix:'18,99 €', cats:["cheveux"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Après-shampoing démêlant, même parfum vétiver fumé que le shampoing. Cheveux souples et brillants.",
+    points:["Démêle en douceur","Cheveux souples et brillants","Même parfum que le shampoing","Usage régulier"],
+    actifs:["Panthénol — démêle et nourrit"],
+    conseils:"Appliquer sur longueurs après le shampoing, laisser poser puis rincer.",
+    chips:["VÉTIVER FUMÉ","DÉMÊLANT","SOUPLESSE"]
+  },
+  {
+    cat:"Cheveux · Shampoing sec", nom:"Shampoing Sec Fraîcheur Express", vol:"100 ml",
+    prix:'17,99 €', cats:["cheveux"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Shampoing sec en spray, absorbe l'excès de sébum et redonne du volume en quelques secondes. Idéal entre deux lavages.",
+    points:["Absorbe l'excès de sébum","Redonne du volume","Effet immédiat","Entre deux lavages"],
+    actifs:["Poudres absorbantes"],
+    conseils:"Vaporiser à distance sur racines, laisser agir quelques secondes puis brosser.",
+    chips:["EXPRESS","SANS RINÇAGE","VOLUME"]
+  },
+  {
+    cat:"Cheveux · Soin", nom:"Huile Fortifiante Cheveux & Cuir Chevelu", vol:"30 ml",
+    prix:'18,99 €', cats:["cheveux"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Huile au romarin pour fortifier cheveux et cuir chevelu, stimule la pousse et apaise les irritations.",
+    points:["Fortifie cheveux & cuir chevelu","Stimule la pousse","Apaise les irritations","À l'huile de romarin"],
+    actifs:["Huile de Romarin — fortifie"],
+    conseils:"Masser sur cuir chevelu sec, laisser poser 30 min puis laver. 1-2 fois par semaine.",
+    chips:["ROMARIN","FORTIFIANT","CUIR CHEVELU"]
+  },
+  {
+    cat:"Cheveux · Exfoliant", nom:"Gommage Cuir Chevelu Romarin & Menthe", vol:"170 ml",
+    prix:'23,99 €', cats:["cheveux"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Gommage cuir chevelu au romarin et à la menthe. Élimine les peaux mortes et les résidus, effet fraîcheur immédiat.",
+    points:["Élimine peaux mortes & résidus","Effet fraîcheur immédiat","Romarin & menthe","Assainit le cuir chevelu"],
+    actifs:["Romarin — purifie","Menthe — effet fraîcheur"],
+    conseils:"Appliquer sur cuir chevelu humide avant le shampoing, masser puis rincer.",
+    chips:["ROMARIN & MENTHE","FRAÎCHEUR","CUIR CHEVELU"]
+  },
+  {
+    cat:"Pack · Trio Visage", nom:"Pack Rituel Visage Homme", vol:"Nettoyant + Crème + Contour Yeux",
+    prix:'54,99 €', sub:"au lieu de 69,97€", cats:["packs","visage"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"La routine visage Homme complète en un pack : Nettoyant Visage, Crème Hydratante et Contour des Yeux 3-en-1. Trois gestes essentiels pour une peau nette et reposée.",
+    points:["3 produits, 1 routine complète","Nettoyant + Crème + Contour Yeux","Prix avantageux vs achat séparé"],
+    actifs:["Acide Hyaluronique","Aloe Vera","Caféine"],
+    conseils:"Nettoyant matin & soir, Crème matin & soir, Contour des Yeux le matin.",
+    chips:["PACK","ROUTINE COMPLÈTE","TRIO"]
+  },
+  {
+    cat:"Pack · Trio Douche", nom:"Pack Douche & Cheveux Vétiver", vol:"Gel 2-en-1 + Shampoing + Après-Shampoing",
+    prix:'44,99 €', sub:"au lieu de 57,97€", cats:["packs","cheveux","corps"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Le trio douche complet : Gel 2-en-1 Cheveux & Corps, Shampoing et Après-Shampoing Vétiver Fumé. Une routine douche simple et efficace.",
+    points:["3 produits pour la douche","Gel 2-en-1 + Shampoing + Après-Shampoing","Parfum vétiver fumé"],
+    actifs:["Protéine de Blé","Bétaïne","Panthénol"],
+    conseils:"Gel 2-en-1 pour le corps, Shampoing puis Après-Shampoing pour les cheveux.",
+    chips:["PACK","VÉTIVER FUMÉ","DOUCHE"]
+  },
+  {
+    cat:"Pack · Duo Signature", nom:"Pack Duo Rituel Bois & Cuir", vol:"Sérum Corps + Crème Mains",
+    prix:'32,99 €', sub:"au lieu de 39,98€", cats:["packs","corps","hydratation"],
+    imgs:["https://cdn.shopify.com/s/files/1/0942/7560/0769/files/0fuT-gc9xarYpHWiGoPBUx8nd5lK4fOG.jpg?v=1782592893"],
+    desc:"Le duo signature Bois & Cuir : Sérum Corporel et Crème Mains, même parfum ambré et boisé. Le cadeau parfait ou le rituel du quotidien.",
+    points:["Duo signature Bois & Cuir","Sérum Corps + Crème Mains assortis","Idéal en cadeau"],
+    actifs:["Acide Hyaluronique","Beurre de Cacao"],
+    conseils:"Sérum corps après la douche, Crème mains autant que nécessaire.",
+    chips:["PACK","BOIS & CUIR","DUO"]
   }
 ];
 
@@ -1273,7 +1497,7 @@ function openModalH(p){
     <span class="cat">${d.cat}</span>
     <h3>${d.nom}</h3>
     <span class="vol">${d.vol}</span>
-    <div class="mprice">${d.prix}</div>
+    <div class="mprice">${d.prix}${d.sub?` <span style="font-size:0.7rem;color:var(--muted);font-weight:600;">${d.sub}</span>`:''}</div>
     <p>${d.desc}</p>
     <h4>Bienfaits</h4>
     <ul>${d.points.map(x=>`<li>${x}</li>`).join('')}</ul>
@@ -1298,7 +1522,7 @@ function renderShopH(){
       <div class="hcard-b">
         <span>${p.cat}</span>
         <h3>${p.nom}</h3>
-        <div class="hcard-price">${p.prix}</div>
+        <div class="hcard-price">${p.prix}${p.sub?` <span style="font-size:0.65rem;color:#8aa39c;font-weight:600;">${p.sub}</span>`:''}</div>
         <a href="#" class="btn homme-btn hcard-btn">Ajouter au panier</a>
       </div>
     </div>`;}).join('');
